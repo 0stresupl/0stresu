@@ -82,21 +82,10 @@
       letter-spacing:.01em;
     }
     .brand-mark{
-      position:relative;
-      width:23px;height:23px;
-      border:1.4px solid var(--sage);
-      border-right-color:transparent;
-      border-radius:50%;
-      transform:rotate(-12deg);
-    }
-    .brand-mark::after{
-      content:"";
-      position:absolute;
-      width:27px;height:1.4px;
-      left:-3px;top:10px;
-      border-radius:2px;
-      background:var(--sage);
-      transform:rotate(-10deg);
+      display:block;
+      width:auto;
+      height:25px;
+      object-fit:contain;
     }
     .back{
       text-decoration:none;
@@ -204,7 +193,7 @@
 <body>
   <header class="topbar">
     <a class="brand" href="index.html" aria-label="0stresu.pl, strona główna">
-      <span class="brand-mark" aria-hidden="true"></span>
+      <img class="brand-mark" src="favicon.png" alt="" width="512" height="512" aria-hidden="true">
       <span>0stresu.pl</span>
     </a>
     <a class="back" href="index.html#kontakt">Wróć do strony</a>

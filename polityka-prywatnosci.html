@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polityka prywatności | 0stresu.pl</title>
+  <meta name="description" content="Polityka prywatności serwisu 0stresu.pl. Informacje o przetwarzaniu danych przesyłanych przez formularz kontaktowy.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://0stresu.pl/polityka-prywatnosci.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#faf9f6;
+      --ink:#1f1f1f;
+      --sub:#646763;
+      --sage:#476254;
+      --sage-dark:#3b5246;
+      --mist:#dceef6;
+      --line:rgba(31,31,31,.08);
+      --glass:rgba(255,255,255,.58);
+      --shadow:0 18px 50px rgba(71,98,84,.09);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family:'Manrope',system-ui,-apple-system,sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.72;
+      -webkit-font-smoothing:antialiased;
+    }
+    body::before,
+    body::after{
+      content:"";
+      position:fixed;
+      z-index:-1;
+      border-radius:50%;
+      pointer-events:none;
+      filter:blur(8px);
+    }
+    body::before{
+      width:62rem;height:62rem;left:50%;top:-38rem;
+      transform:translateX(-50%);
+      background:radial-gradient(circle,rgba(202,231,244,.9),rgba(220,238,246,0) 70%);
+    }
+    body::after{
+      width:46rem;height:46rem;right:-24rem;bottom:-25rem;
+      background:radial-gradient(circle,rgba(71,112,91,.18),rgba(71,98,84,0) 70%);
+    }
+    a{color:inherit}
+    a:focus-visible{outline:2px solid var(--sage);outline-offset:4px;border-radius:5px}
+    .topbar{
+      position:sticky;
+      top:16px;
+      z-index:10;
+      width:min(1120px,calc(100% - 32px));
+      margin:16px auto 0;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      padding:13px 18px;
+      border:1px solid rgba(255,255,255,.75);
+      border-radius:999px;
+      background:rgba(255,255,255,.66);
+      box-shadow:0 10px 34px rgba(31,31,31,.06);
+      backdrop-filter:blur(18px) saturate(135%);
+      -webkit-backdrop-filter:blur(18px) saturate(135%);
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:11px;
+      text-decoration:none;
+      font-weight:600;
+      letter-spacing:.01em;
+    }
+    .brand-mark{
+      position:relative;
+      width:23px;height:23px;
+      border:1.4px solid var(--sage);
+      border-right-color:transparent;
+      border-radius:50%;
+      transform:rotate(-12deg);
+    }
+    .brand-mark::after{
+      content:"";
+      position:absolute;
+      width:27px;height:1.4px;
+      left:-3px;top:10px;
+      border-radius:2px;
+      background:var(--sage);
+      transform:rotate(-10deg);
+    }
+    .back{
+      text-decoration:none;
+      font-size:.9rem;
+      font-weight:600;
+      color:var(--sage-dark);
+      padding:8px 13px;
+      border-radius:999px;
+      transition:background .25s ease;
+    }
+    .back:hover{background:rgba(71,98,84,.08)}
+    main{
+      width:min(820px,calc(100% - 32px));
+      margin:88px auto 80px;
+    }
+    .eyebrow{
+      margin:0 0 10px;
+      color:var(--sage);
+      font-size:.78rem;
+      font-weight:700;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+    h1,h2{line-height:1.17;letter-spacing:-.025em}
+    h1{
+      margin:0;
+      max-width:720px;
+      font-size:clamp(2.5rem,7vw,4.8rem);
+      font-weight:800;
+    }
+    .intro{
+      max-width:680px;
+      margin:24px 0 42px;
+      color:var(--sub);
+      font-size:clamp(1rem,2.1vw,1.14rem);
+    }
+    .policy{
+      padding:clamp(24px,5vw,52px);
+      border:1px solid rgba(255,255,255,.8);
+      border-radius:30px;
+      background:linear-gradient(145deg,rgba(255,255,255,.74),rgba(255,255,255,.43));
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(18px) saturate(125%);
+      -webkit-backdrop-filter:blur(18px) saturate(125%);
+    }
+    .policy section{
+      padding:28px 0;
+      border-bottom:1px solid var(--line);
+    }
+    .policy section:first-child{padding-top:0}
+    .policy section:last-child{padding-bottom:0;border-bottom:0}
+    h2{
+      margin:0 0 12px;
+      font-size:clamp(1.2rem,3vw,1.5rem);
+    }
+    p{margin:0 0 13px}
+    p:last-child{margin-bottom:0}
+    ul{margin:10px 0 0;padding-left:1.25rem}
+    li{margin:.45rem 0;padding-left:.25rem}
+    .contact-card{
+      display:grid;
+      gap:4px;
+      margin-top:14px;
+      padding:18px 20px;
+      border:1px solid rgba(71,98,84,.11);
+      border-radius:18px;
+      background:rgba(220,238,246,.38);
+    }
+    .contact-card strong{font-size:1.03rem}
+    .contact-card a{color:var(--sage-dark);font-weight:600}
+    .notice{
+      margin-top:18px;
+      padding:18px 20px;
+      border-left:3px solid var(--sage);
+      border-radius:5px 16px 16px 5px;
+      background:rgba(71,98,84,.06);
+      color:#3f4642;
+    }
+    .date{
+      margin-top:28px;
+      color:var(--sub);
+      font-size:.84rem;
+    }
+    footer{
+      width:min(820px,calc(100% - 32px));
+      margin:0 auto;
+      padding:0 0 40px;
+      text-align:center;
+      color:var(--sub);
+      font-size:.82rem;
+    }
+    @media(max-width:600px){
+      .topbar{top:10px;margin-top:10px;padding:10px 13px}
+      .brand{font-size:.9rem}
+      .back{font-size:.82rem;padding:7px 9px}
+      main{margin-top:58px}
+      .policy{border-radius:23px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *{transition:none!important}
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="0stresu.pl, strona główna">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>0stresu.pl</span>
+    </a>
+    <a class="back" href="index.html#kontakt">Wróć do strony</a>
+  </header>
+
+  <main>
+    <p class="eyebrow">0stresu.pl</p>
+    <h1>Polityka prywatności</h1>
+    <p class="intro">
+      Poniżej znajdziesz prostą informację o tym, jakie dane otrzymuję,
+      gdy do mnie piszesz, po co ich potrzebuję i jakie masz prawa.
+    </p>
+
+    <article class="policy">
+      <section>
+        <h2>1. Kto odpowiada za Twoje dane?</h2>
+        <p>Administratorem danych osobowych przekazywanych za pośrednictwem strony 0stresu.pl jest:</p>
+        <div class="contact-card">
+          <strong>Remigiusz Nowak</strong>
+          <span>kontakt: <a href="mailto:kontakt@0stresu.pl">kontakt@0stresu.pl</a></span>
+        </div>
+      </section>
+
+      <section>
+        <h2>2. Jakie dane zbieram?</h2>
+        <p>Gdy korzystasz z formularza kontaktowego, otrzymuję dane, które samodzielnie w nim podasz:</p>
+        <ul>
+          <li>imię,</li>
+          <li>adres e-mail,</li>
+          <li>numer telefonu, jeśli zdecydujesz się go podać,</li>
+          <li>treść wiadomości.</li>
+        </ul>
+        <p class="notice">
+          Formularz nie jest przeznaczony do przesyłania dokumentacji medycznej
+          ani szczegółowych informacji o stanie zdrowia. Na początek wystarczy
+          krótka, ogólna wiadomość.
+        </p>
+      </section>
+
+      <section>
+        <h2>3. Po co przetwarzam te dane?</h2>
+        <p>Dane wykorzystuję wyłącznie po to, aby:</p>
+        <ul>
+          <li>odpowiedzieć na Twoją wiadomość,</li>
+          <li>pozostać z Tobą w kontakcie w sprawie, z którą się zgłaszasz,</li>
+          <li>ustalić termin i formę pierwszej rozmowy, jeśli o nią zapytasz,</li>
+          <li>zapewnić bezpieczeństwo strony i obsługi korespondencji.</li>
+        </ul>
+        <p>
+          Podstawą przetwarzania jest mój prawnie uzasadniony interes polegający
+          na prowadzeniu korespondencji i odpowiadaniu na zapytania
+          (art. 6 ust. 1 lit. f RODO). Jeżeli kontakt prowadzi do ustalenia
+          warunków spotkania, podstawą może być również podjęcie działań na
+          Twoje żądanie przed zawarciem umowy (art. 6 ust. 1 lit. b RODO).
+        </p>
+      </section>
+
+      <section>
+        <h2>4. Czy podanie danych jest konieczne?</h2>
+        <p>
+          Podanie danych jest dobrowolne. Adres e-mail i treść wiadomości są
+          jednak potrzebne, żebym mógł odpowiedzieć. Numer telefonu pozostaje
+          całkowicie opcjonalny.
+        </p>
+      </section>
+
+      <section>
+        <h2>5. Jak długo przechowuję dane?</h2>
+        <p>
+          Korespondencję przechowuję przez czas potrzebny do udzielenia
+          odpowiedzi i zakończenia kontaktu, a następnie co do zasady nie dłużej
+          niż 12 miesięcy. Dane mogą być przechowywane dłużej tylko wtedy, gdy
+          jest to potrzebne do ustalenia, dochodzenia lub obrony roszczeń albo
+          wymagają tego przepisy prawa.
+        </p>
+      </section>
+
+      <section>
+        <h2>6. Kto może mieć dostęp do danych?</h2>
+        <p>
+          W zakresie niezbędnym do działania strony, formularza i poczty dane
+          mogą być przetwarzane przez dostawców usług technicznych, w
+          szczególności GitHub Pages, Formspree, Cloudflare oraz dostawcę
+          poczty elektronicznej.
+        </p>
+        <p>
+          Nie sprzedaję danych i nie udostępniam ich w celach reklamowych.
+          Niektóre podmioty techniczne mogą przetwarzać dane poza Europejskim
+          Obszarem Gospodarczym. W takim przypadku transfer odbywa się z
+          zastosowaniem mechanizmów przewidzianych w RODO, takich jak
+          standardowe klauzule umowne lub decyzja stwierdzająca odpowiedni
+          stopień ochrony.
+        </p>
+      </section>
+
+      <section>
+        <h2>7. Jakie masz prawa?</h2>
+        <p>W zależności od sytuacji możesz poprosić o:</p>
+        <ul>
+          <li>dostęp do swoich danych i otrzymanie ich kopii,</li>
+          <li>sprostowanie danych,</li>
+          <li>usunięcie lub ograniczenie przetwarzania,</li>
+          <li>przeniesienie danych, gdy przepisy dają takie prawo,</li>
+          <li>wniesienie sprzeciwu wobec przetwarzania opartego na prawnie uzasadnionym interesie.</li>
+        </ul>
+        <p>
+          W takiej sprawie napisz na
+          <a href="mailto:kontakt@0stresu.pl"><strong>kontakt@0stresu.pl</strong></a>.
+          Masz również prawo złożyć skargę do Prezesa Urzędu Ochrony Danych
+          Osobowych.
+        </p>
+      </section>
+
+      <section>
+        <h2>8. Automatyczne decyzje i marketing</h2>
+        <p>
+          Dane nie są wykorzystywane do zautomatyzowanego podejmowania decyzji,
+          profilowania ani wysyłania newslettera. Wiadomość z formularza służy
+          tylko do bezpośredniego kontaktu.
+        </p>
+      </section>
+
+      <section>
+        <h2>9. Pliki cookies i dane techniczne</h2>
+        <p>
+          Strona nie korzysta z narzędzi reklamowych ani analitycznych i nie
+          zapisuje własnych cookies marketingowych. Dostawcy hostingu i
+          zabezpieczeń mogą automatycznie otrzymywać podstawowe dane techniczne,
+          takie jak adres IP, typ przeglądarki oraz czas żądania. Dane te służą
+          prawidłowemu i bezpiecznemu wyświetlaniu strony.
+        </p>
+        <p>
+          Czcionka używana na stronie jest pobierana z usługi Google Fonts,
+          dlatego przeglądarka może połączyć się z serwerami Google w celu jej
+          wyświetlenia.
+        </p>
+      </section>
+
+      <section>
+        <h2>10. Zmiany polityki</h2>
+        <p>
+          Polityka może zostać zaktualizowana, jeżeli zmieni się sposób
+          działania strony, formularza lub obowiązujące przepisy. Aktualna
+          wersja będzie zawsze dostępna pod tym adresem.
+        </p>
+      </section>
+    </article>
+
+    <p class="date">Ostatnia aktualizacja: 28 lipca 2026 r.</p>
+  </main>
+
+  <footer>© 2026 0stresu.pl</footer>
+</body>
+</html>

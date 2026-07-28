@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nie znaleziono strony | 0stresu.pl</title>
+  <meta name="robots" content="noindex,follow">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#faf9f6;
+      --ink:#1f1f1f;
+      --sub:#666b67;
+      --sage:#476254;
+      --mist:#dceef6;
+      --line:rgba(31,31,31,.08);
+      --glass:rgba(255,255,255,.58);
+      --shadow:0 24px 70px rgba(71,98,84,.11);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%}
+    body{
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      padding:32px 20px;
+      overflow:hidden;
+      font-family:'Manrope',system-ui,-apple-system,sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 78% 4%,rgba(220,238,246,.92),rgba(220,238,246,0) 34%),
+        radial-gradient(circle at 5% 96%,rgba(206,229,241,.72),rgba(206,229,241,0) 38%),
+        radial-gradient(circle at 98% 92%,rgba(71,98,84,.14),rgba(71,98,84,0) 36%),
+        var(--bg);
+      -webkit-font-smoothing:antialiased;
+    }
+    body::before,
+    body::after{
+      content:"";
+      position:fixed;
+      pointer-events:none;
+      width:520px;
+      height:190px;
+      border:1px solid rgba(255,255,255,.82);
+      border-radius:50%;
+      background:linear-gradient(145deg,rgba(255,255,255,.16),rgba(220,238,246,.08));
+      box-shadow:inset 0 0 32px rgba(255,255,255,.42);
+    }
+    body::before{left:-180px;bottom:-110px;transform:rotate(8deg)}
+    body::after{right:-180px;top:-110px;transform:rotate(-8deg)}
+    main{
+      position:relative;
+      width:min(680px,100%);
+      padding:58px 56px 52px;
+      text-align:center;
+      border:1px solid rgba(255,255,255,.9);
+      border-radius:38px;
+      background:linear-gradient(145deg,rgba(255,255,255,.72),rgba(255,255,255,.40));
+      box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,.9);
+      -webkit-backdrop-filter:blur(20px) saturate(125%);
+      backdrop-filter:blur(20px) saturate(125%);
+    }
+    .logo{
+      display:block;
+      width:106px;
+      height:106px;
+      object-fit:contain;
+      margin:0 auto 20px;
+      filter:drop-shadow(0 10px 20px rgba(71,98,84,.08));
+    }
+    .code{
+      margin:0 0 8px;
+      color:var(--sage);
+      font-size:clamp(4rem,16vw,7.2rem);
+      font-weight:300;
+      line-height:.9;
+      letter-spacing:-.07em;
+    }
+    h1{
+      max-width:520px;
+      margin:0 auto 16px;
+      font-size:clamp(1.8rem,6vw,2.75rem);
+      line-height:1.12;
+      letter-spacing:-.04em;
+    }
+    p{
+      max-width:480px;
+      margin:0 auto;
+      color:var(--sub);
+      font-size:1.02rem;
+      line-height:1.75;
+    }
+    .back{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:52px;
+      margin-top:30px;
+      padding:0 26px;
+      border:1px solid rgba(71,98,84,.2);
+      border-radius:999px;
+      color:#fff;
+      background:linear-gradient(135deg,#527160,#3f594c);
+      box-shadow:0 13px 30px rgba(71,98,84,.18),inset 0 1px 0 rgba(255,255,255,.22);
+      font-size:.96rem;
+      font-weight:600;
+      text-decoration:none;
+      transition:transform .25s ease,box-shadow .25s ease;
+    }
+    .back:hover{transform:translateY(-2px);box-shadow:0 17px 35px rgba(71,98,84,.23)}
+    .back:focus-visible{outline:3px solid rgba(71,98,84,.26);outline-offset:4px}
+    .atom{
+      position:absolute;
+      width:12px;
+      height:12px;
+      border-radius:50%;
+      box-shadow:0 0 0 5px rgba(255,255,255,.72);
+    }
+    .atom.one{left:42px;top:58px;background:#b5674d}
+    .atom.two{right:44px;top:42%;background:#7c96a3}
+    .atom.three{left:21%;bottom:40px;background:#c9a26d}
+    @media(max-width:560px){
+      main{padding:42px 24px 38px;border-radius:30px}
+      .logo{width:86px;height:86px;margin-bottom:16px}
+      .atom.one{left:24px;top:42px}
+      .atom.two{right:24px}
+      .atom.three{left:18%;bottom:25px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      *{scroll-behavior:auto!important;transition:none!important}
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <span class="atom one" aria-hidden="true"></span>
+    <span class="atom two" aria-hidden="true"></span>
+    <span class="atom three" aria-hidden="true"></span>
+    <img class="logo" src="favicon.png" alt="">
+    <p class="code" aria-hidden="true">404</p>
+    <h1>Wygląda na to, że tej strony tutaj nie ma</h1>
+    <p>Możliwe, że adres się zmienił albo link prowadził w niewłaściwe miejsce. Wróć spokojnie na stronę główną.</p>
+    <a class="back" href="index.html">Wróć na stronę główną</a>
+  </main>
+</body>
+</html>

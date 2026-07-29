@@ -186,8 +186,25 @@ header.scrolled nav{
     padding:10px 16px;
     font-size:13px;
     line-height:1;
-    color:#fff;
+    color:var(--sage-dark);
     white-space:nowrap;
+    background:
+      linear-gradient(135deg,rgba(255,255,255,.72),rgba(221,234,228,.5));
+    border:1px solid rgba(71,98,84,.18);
+    box-shadow:
+      inset 1px 1px 0 rgba(255,255,255,.9),
+      0 5px 16px rgba(71,98,84,.08);
+    backdrop-filter:blur(12px) saturate(145%);
+    -webkit-backdrop-filter:blur(12px) saturate(145%);
+  }
+  .mobile-contact-btn:hover,
+  .mobile-contact-btn:active{
+    color:var(--sage-dark);
+    background:
+      linear-gradient(135deg,rgba(255,255,255,.82),rgba(205,224,215,.64));
+    box-shadow:
+      inset 1px 1px 0 rgba(255,255,255,.95),
+      0 6px 18px rgba(71,98,84,.11);
   }
   .menu-btn{display:block}
   .mobile-menu{

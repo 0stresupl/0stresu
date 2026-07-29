@@ -97,6 +97,36 @@
       transition:background .25s ease;
     }
     .back:hover{background:rgba(71,98,84,.08)}
+    .topbar-wave{
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      pointer-events:none;
+    }
+    .topbar-wave span{
+      width:7px;
+      height:7px;
+      flex:0 0 auto;
+      border-radius:50%;
+      background:#6f9f8a;
+      box-shadow:0 0 10px rgba(111,159,138,.3);
+      animation:topbar-wave 3.8s ease-in-out infinite;
+    }
+    .topbar-wave span:nth-child(2){width:6px;height:6px;background:#78a7c5;animation-delay:-.42s}
+    .topbar-wave span:nth-child(3){width:9px;height:9px;background:#d4a64a;animation-delay:-.84s}
+    .topbar-wave span:nth-child(4){width:7px;height:7px;background:#b78191;animation-delay:-1.26s}
+    .topbar-wave span:nth-child(5){width:9px;height:9px;background:#d77e66;animation-delay:-1.68s}
+    .topbar-wave span:nth-child(6){width:7px;height:7px;background:#78a7c5;animation-delay:-2.1s}
+    .topbar-wave span:nth-child(7){width:6px;height:6px;animation-delay:-2.52s}
+    @keyframes topbar-wave{
+      0%,100%{transform:translateY(5px)}
+      50%{transform:translateY(-5px)}
+    }
     main{
       width:min(820px,calc(100% - 32px));
       margin:88px auto 80px;
@@ -181,12 +211,15 @@
       .topbar{top:10px;margin-top:10px;padding:10px 13px}
       .brand{font-size:.9rem}
       .back{font-size:.82rem;padding:7px 9px}
+      .topbar-wave{gap:6px}
+      .topbar-wave span:nth-child(1),
+      .topbar-wave span:nth-child(7){display:none}
       main{margin-top:58px}
       .policy{border-radius:23px}
     }
     @media(prefers-reduced-motion:reduce){
       html{scroll-behavior:auto}
-      *{transition:none!important}
+      *{animation:none!important;transition:none!important}
     }
   </style>
 </head>
@@ -196,6 +229,10 @@
       <img class="brand-mark" src="favicon.png" alt="" width="512" height="512" aria-hidden="true">
       <span>0stresu.pl</span>
     </a>
+    <div class="topbar-wave" aria-hidden="true">
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+    </div>
     <a class="back" href="index.html#kontakt">Wróć do strony</a>
   </header>
 
@@ -212,7 +249,7 @@
         <h2>1. Kto odpowiada za Twoje dane?</h2>
         <p>Administratorem danych osobowych przekazywanych za pośrednictwem strony 0stresu.pl jest:</p>
         <div class="contact-card">
-          <strong>Remigiusz Nowak</strong>
+          <strong>Remigiusz Kopiwoda</strong>
           <span>kontakt: <a href="mailto:kontakt@0stresu.pl">kontakt@0stresu.pl</a></span>
         </div>
       </section>

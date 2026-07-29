@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artykuły | 0stresu.pl</title>
+  <meta name="description" content="Artykuły o stresie, napięciu, lęku i pracy z emocjami na 0stresu.pl.">
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="https://0stresu.pl/artykuly.html">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#faf9f6;
+      --ink:#1f1f1f;
+      --sub:#646763;
+      --sage:#476254;
+      --sage-dark:#3b5246;
+      --mist:#dceef6;
+      --ease:cubic-bezier(.22,1,.36,1);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      font-family:'Manrope',system-ui,-apple-system,sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.7;
+      -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
+    }
+    .light{
+      position:fixed;
+      z-index:-1;
+      border-radius:50%;
+      pointer-events:none;
+    }
+    .light-one{
+      width:68rem;height:68rem;
+      left:50%;top:-43rem;
+      transform:translateX(-50%);
+      background:radial-gradient(circle,rgba(202,231,244,.95),rgba(220,238,246,0) 69%);
+      animation:breathe-one 10s ease-in-out infinite;
+    }
+    .light-two{
+      width:48rem;height:48rem;
+      left:-25rem;bottom:-24rem;
+      background:radial-gradient(circle,rgba(71,112,91,.2),rgba(71,98,84,0) 70%);
+      animation:breathe 10s ease-in-out -4s infinite;
+    }
+    .light-three{
+      width:42rem;height:42rem;
+      right:-22rem;bottom:-20rem;
+      background:radial-gradient(circle,rgba(206,215,240,.64),rgba(220,238,246,0) 70%);
+      animation:breathe 10s ease-in-out -7s infinite;
+    }
+    @keyframes breathe{
+      0%,100%{opacity:.68;transform:scale(.96)}
+      45%{opacity:1;transform:scale(1.04)}
+    }
+    @keyframes breathe-one{
+      0%,100%{opacity:.72;transform:translateX(-50%) scale(.96)}
+      45%{opacity:1;transform:translateX(-50%) scale(1.04)}
+    }
+    a{color:inherit}
+    a:focus-visible{outline:2px solid var(--sage);outline-offset:4px;border-radius:6px}
+    .topbar{
+      position:fixed;
+      top:16px;
+      left:50%;
+      z-index:50;
+      width:min(1120px,calc(100% - 40px));
+      height:64px;
+      transform:translateX(-50%);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      padding:0 22px;
+      border:1px solid rgba(255,255,255,.72);
+      border-radius:999px;
+      background:
+        radial-gradient(circle at 18% 0%,rgba(255,255,255,.8),transparent 38%),
+        linear-gradient(135deg,rgba(255,255,255,.5),rgba(236,244,241,.28));
+      box-shadow:
+        inset 1px 1px 0 rgba(255,255,255,.98),
+        inset -1px -1px 0 rgba(71,98,84,.11),
+        inset 0 12px 24px rgba(255,255,255,.1),
+        0 12px 34px rgba(31,31,31,.07);
+      backdrop-filter:blur(20px) saturate(180%);
+      -webkit-backdrop-filter:blur(20px) saturate(180%);
+    }
+    .brand{
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      font-size:18px;
+      font-weight:500;
+      letter-spacing:.01em;
+      color:var(--sage);
+    }
+    .brand img{display:block;height:27px;width:auto;transition:transform .7s var(--ease)}
+    .brand:hover img{transform:scale(1.06)}
+    .back{
+      text-decoration:none;
+      font-size:15px;
+      font-weight:500;
+      color:var(--sub);
+      transition:color .35s ease;
+    }
+    .back:hover{color:var(--ink)}
+    .topbar-wave{
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      pointer-events:none;
+    }
+    .topbar-wave span{
+      width:7px;
+      height:7px;
+      flex:0 0 auto;
+      border-radius:50%;
+      background:#6f9f8a;
+      box-shadow:0 0 10px rgba(111,159,138,.3);
+      animation:topbar-wave 3.8s ease-in-out infinite;
+    }
+    .topbar-wave span:nth-child(2){width:6px;height:6px;background:#78a7c5;animation-delay:-.42s}
+    .topbar-wave span:nth-child(3){width:9px;height:9px;background:#d4a64a;animation-delay:-.84s}
+    .topbar-wave span:nth-child(4){width:7px;height:7px;background:#b78191;animation-delay:-1.26s}
+    .topbar-wave span:nth-child(5){width:9px;height:9px;background:#d77e66;animation-delay:-1.68s}
+    .topbar-wave span:nth-child(6){width:7px;height:7px;background:#78a7c5;animation-delay:-2.1s}
+    .topbar-wave span:nth-child(7){width:6px;height:6px;animation-delay:-2.52s}
+    @keyframes topbar-wave{
+      0%,100%{transform:translateY(5px)}
+      50%{transform:translateY(-5px)}
+    }
+    main{
+      flex:1;
+      width:min(920px,calc(100% - 32px));
+      margin:clamp(122px,15vh,164px) auto 70px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .articles-card{
+      position:relative;
+      width:100%;
+      padding:clamp(34px,7vw,76px);
+      border:1px solid rgba(255,255,255,.84);
+      border-radius:34px;
+      text-align:center;
+      background:linear-gradient(145deg,rgba(255,255,255,.76),rgba(255,255,255,.42));
+      box-shadow:0 24px 70px rgba(71,98,84,.11);
+      backdrop-filter:blur(20px) saturate(130%);
+      -webkit-backdrop-filter:blur(20px) saturate(130%);
+      overflow:hidden;
+    }
+    .eyebrow{
+      margin:0 0 15px;
+      color:var(--sage);
+      font-size:.77rem;
+      font-weight:700;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+    h1{
+      margin:0;
+      font-size:clamp(2.8rem,7vw,5.4rem);
+      line-height:1.06;
+      letter-spacing:-.045em;
+      font-weight:800;
+    }
+    .lead{
+      max-width:650px;
+      margin:27px auto 0;
+      color:var(--sub);
+      font-size:clamp(1rem,2.1vw,1.17rem);
+    }
+    .quiet-line{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      margin:34px auto 0;
+      color:var(--sage-dark);
+      font-size:.92rem;
+      font-weight:600;
+    }
+    .quiet-line::before,.quiet-line::after{
+      content:"";
+      width:42px;height:1px;
+      background:rgba(71,98,84,.28);
+    }
+    .button{
+      display:inline-block;
+      margin-top:30px;
+      padding:15px 28px;
+      border-radius:999px;
+      color:#fff;
+      background:var(--sage);
+      box-shadow:0 12px 28px rgba(71,98,84,.18);
+      text-decoration:none;
+      font-size:.95rem;
+      font-weight:600;
+      transition:transform .3s var(--ease),background .3s ease;
+    }
+    .button:hover{transform:translateY(-2px);background:var(--sage-dark)}
+    footer{
+      width:min(920px,calc(100% - 32px));
+      margin:0 auto;
+      padding:0 0 34px;
+      text-align:center;
+      color:var(--sub);
+      font-size:.78rem;
+      opacity:.7;
+    }
+    @media(max-width:600px){
+      .topbar{top:10px;width:calc(100% - 20px);height:60px;padding:0 14px}
+      .brand{font-size:16px;gap:9px}
+      .brand img{height:27px}
+      .back{font-size:13px}
+      .topbar-wave{gap:6px}
+      .topbar-wave span:nth-child(1),
+      .topbar-wave span:nth-child(7){display:none}
+      main{margin-top:104px}
+      .articles-card{border-radius:25px}
+      .quiet-line::before,.quiet-line::after{width:24px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      *{animation:none!important;transition:none!important}
+    }
+  </style>
+</head>
+<body>
+  <div class="light light-one" aria-hidden="true"></div>
+  <div class="light light-two" aria-hidden="true"></div>
+  <div class="light light-three" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="0stresu.pl, strona główna">
+      <img src="header-logo.png" alt="">
+      <span>0stresu.pl</span>
+    </a>
+    <div class="topbar-wave" aria-hidden="true">
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+    </div>
+    <a class="back" href="index.html">Wróć do strony</a>
+  </header>
+
+  <main>
+    <section class="articles-card" aria-labelledby="pageTitle">
+      <p class="eyebrow">0stresu.pl</p>
+      <h1 id="pageTitle">Artykuły</h1>
+      <p class="lead">
+        Będę dzielić się tutaj tekstami o stresie, napięciu, lęku
+        i pracy z tym, co na co dzień dzieje się w środku.
+      </p>
+      <p class="quiet-line">Pierwsze artykuły pojawią się wkrótce</p>
+      <a class="button" href="index.html">Wróć do strony głównej</a>
+    </section>
+  </main>
+
+  <footer>© 2026 0stresu.pl</footer>
+</body>
+</html>

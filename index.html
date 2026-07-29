@@ -176,10 +176,19 @@ header.scrolled nav{
 .btn-ghost:hover{background:rgba(255,255,255,.8);border-color:rgba(71,98,84,.3)}
 .btn-lg{padding:16px 34px;font-size:16px}
 
+.mobile-nav-actions{display:none}
 .menu-btn{display:none;background:none;border:none;cursor:pointer;padding:8px;color:var(--ink)}
 .mobile-menu{display:none}
 @media(max-width:900px){
   .nav-links{display:none}
+  .mobile-nav-actions{display:flex;align-items:center;gap:6px}
+  .mobile-contact-btn{
+    padding:10px 16px;
+    font-size:13px;
+    line-height:1;
+    color:#fff;
+    white-space:nowrap;
+  }
   .menu-btn{display:block}
   .mobile-menu{
     display:block;max-width:1120px;margin:10px auto 0;
@@ -195,7 +204,6 @@ header.scrolled nav{
   .mobile-menu .inner{display:flex;flex-direction:column;gap:4px;padding:16px 22px 22px}
   .mobile-menu a{text-decoration:none;font-size:15px;font-weight:500;color:var(--subtext);padding:12px;border-radius:14px}
   .mobile-menu a:hover{background:var(--sage-soft);color:var(--ink)}
-  .mobile-menu .btn{color:#fff;text-align:center;margin-top:10px}
 }
 
 /* ============ HERO ============ */
@@ -1031,16 +1039,18 @@ footer{border-top:1px solid var(--border);padding:48px 24px 32px}
       <a href="#sesja">Pierwsze spotkanie</a>
       <a class="btn" href="#kontakt">Napisz do mnie</a>
     </div>
-    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Otwórz menu">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
-    </button>
+    <div class="mobile-nav-actions">
+      <a class="btn mobile-contact-btn" href="#kontakt">Napisz do mnie</a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Otwórz menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+    </div>
   </nav>
   <div class="mobile-menu" id="mobileMenu">
     <div class="inner">
       <a href="#metoda">Jak to działa</a>
       <a href="#poznaj-mnie">O mnie</a>
       <a href="#sesja">Pierwsze spotkanie</a>
-      <a class="btn" href="#kontakt">Napisz do mnie</a>
     </div>
   </div>
 </header>

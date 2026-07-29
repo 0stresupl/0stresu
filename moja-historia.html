@@ -262,6 +262,30 @@
       background:linear-gradient(135deg,rgba(236,244,241,.7),rgba(255,255,255,.44));
       box-shadow:inset 0 1px 0 rgba(255,255,255,.78);
     }
+    .story-video{
+      width:min(390px,100%);
+      margin:48px auto 4px;
+      text-align:center;
+    }
+    .story-video video{
+      display:block;
+      width:100%;
+      aspect-ratio:9/16;
+      object-fit:cover;
+      border:1px solid rgba(255,255,255,.9);
+      border-radius:28px;
+      background:#dfe9e5;
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.82),
+        0 22px 52px rgba(52,76,64,.15);
+    }
+    .story-video figcaption{
+      max-width:360px;
+      margin:17px auto 0;
+      color:var(--sub);
+      font-size:.87rem;
+      line-height:1.65;
+    }
     .story-quote{
       position:relative;
       margin:35px 0!important;
@@ -349,6 +373,8 @@
       .atoms{margin-bottom:35px}
       .story-section{margin-top:39px}
       .story-note{padding:20px 19px}
+      .story-video{width:min(310px,100%);margin-top:40px}
+      .story-video video{border-radius:23px}
       .story-ending{margin-top:43px;border-radius:21px}
     }
     @media(prefers-reduced-motion:reduce){
@@ -464,6 +490,23 @@
           <p><strong>Oj, jak bardzo się myliło.</strong></p>
         </section>
 
+        <figure class="story-video">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="medytacja-nad-jeziorem-poster.jpg"
+            aria-label="Remigiusz medytujący nad jeziorem"
+          >
+            <source src="medytacja-nad-jeziorem.mp4" type="video/mp4">
+          </video>
+          <figcaption>
+            Medytacja była ważną częścią tej drogi, ale nie końcem poszukiwań.
+          </figcaption>
+        </figure>
+
         <section class="story-section">
           <h2>Sama wiedza nie wystarczyła</h2>
           <p>
@@ -546,5 +589,12 @@
   </main>
 
   <footer>© 2026 0stresu.pl</footer>
+  <script>
+    const storyVideo = document.querySelector('.story-video video');
+    if (storyVideo && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      storyVideo.removeAttribute('autoplay');
+      storyVideo.pause();
+    }
+  </script>
 </body>
 </html>

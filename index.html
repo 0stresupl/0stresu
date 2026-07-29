@@ -201,7 +201,9 @@ header.scrolled nav{
 /* ============ HERO ============ */
 .hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 24px 80px}
 .hero h1{font-size:clamp(2.6rem,6.5vw,4.6rem);margin-top:34px}
+.hero .hero-lead{margin-top:24px;font-size:clamp(1rem,1.7vw,1.14rem);font-weight:400;color:var(--subtext);max-width:720px;line-height:1.65}
 .hero .sub{margin-top:28px;font-size:clamp(1.05rem,2.2vw,1.3rem);font-weight:500;color:var(--subtext);max-width:640px}
+.hero .hero-lead + .sub{margin-top:16px}
 .hero .cta{margin-top:46px;display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
 .eyebrow{margin-top:22px;font-size:13px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:var(--subtext)}
 
@@ -1087,9 +1089,10 @@ footer{border-top:1px solid var(--border);padding:48px 24px 32px}
   </div>
 
   <h1>
-    <span class="sr-only">Pomagam uwalniać emocje, które latami siedziały w Tobie.</span>
-    <span class="headline-wrap" aria-hidden="true">Pomagam <span class="release-word color-shift">uwalniać</span> emocje,<br>które latami siedziały w Tobie.</span>
+    <span class="sr-only">Stres nie musi już decydować, jak wygląda Twoje życie.</span>
+    <span class="headline-wrap" aria-hidden="true"><span class="release-word color-shift">Stres</span> nie musi już decydować,<br>jak wygląda Twoje życie.</span>
   </h1>
+  <p class="hero-lead">Możesz przestać rezygnować z rzeczy, których chcesz, tylko dlatego, że pojawia się napięcie albo lęk.</p>
   <p class="sub">Bez oceniania. <span class="shimmer-word">Bez presji.</span> W Twoim tempie.</p>
   <div class="cta">
     <a class="btn btn-lg" href="#kontakt">Porozmawiajmy bez pośpiechu</a>
